@@ -34,7 +34,7 @@ const resetpassword = async (email) => {
       from: "sidh.geetha@gmail.com",
       to: email,
       subject: "Reset Password for the app",
-      text: `Please click this link to reset the password https://main--jolly-gecko-68dd0a.netlify.app/setnew-password?token=${token}`,
+      text: `Please click this link to reset the password https://main--cerulean-raindrop-2dcc3f.netlify.app/setnew-password?token=${token}`,
     };
 
     // user.resetPasswordToken = token;
