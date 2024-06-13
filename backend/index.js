@@ -6,9 +6,6 @@ import userRouter from "./Routers/user.router.js";
 import { nanoid } from "nanoid";
 import Url from "./Models/url.js";
 
-
-
-
 dotenv.config();
 const port = process.env.PORT;
 
@@ -17,8 +14,8 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://main--jolly-gecko-68dd0a.netlify.app",
-      "https://nodejsday5-passwordresettask.onrender.com",
+      "https://main--cerulean-raindrop-2dcc3f.netlify.app",
+      "https://nodejsday6-urlshortener.onrender.com",
       "http://localhost:5173",
     ],
     credentials: true,
@@ -74,24 +71,15 @@ app.post("/api/shorten-url", async (req, res) => {
   }
 });
 
-
-
-
-
-
 app.get("/api/listurls", async (req, res) => {
   try {
     const urls = await Url.find();
     res.status(200).json(urls);
-
   } catch (err) {
     console.error(err);
     res.status(500).json("Server error");
   }
 });
-
-
-
 
 app.listen(port, () => {
   console.log("App is lestening in the port", port);
