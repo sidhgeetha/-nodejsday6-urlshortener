@@ -19,7 +19,7 @@ const UserRegister = () => {
 
     await axios
       .post(
-        "https://nodejsday5-passwordresettask.onrender.com/api/user/register",
+        "https://nodejsday6-urlshortener.onrender.com/api/user/register",
         payloads
       )
       .then((res) => {

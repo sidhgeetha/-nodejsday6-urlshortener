@@ -14,7 +14,7 @@ const ResetPassword = () => {
 
     await axios
       .post(
-        "https://nodejsday5-passwordresettask.onrender.com/api/user/reset-password",
+        "https://nodejsday6-urlshortener.onrender.com/api/user/reset-password",
         payload
       )
       .then((res) => {
