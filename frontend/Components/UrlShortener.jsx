@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const UrlShortener = () => {
@@ -11,7 +11,7 @@ const UrlShortener = () => {
     try {
       // Send the long URL to the backend endpoint /api/shorten-url
       const response = await axios.post(
-        "http://localhost:4000/api/shorten-url",
+        "https://nodejsday6-urlshortener.onrender.com/api/shorten-url",
         { url }
       );
 
@@ -31,26 +31,28 @@ const UrlShortener = () => {
     }
   };
 
-   useEffect(() => {
-     const fetchUrls = async () => {
-       try {
-         // Send the GET request to the backend endpoint /api/listurls
-         const response = await axios.get("http://localhost:4000/api/listurls");
+  useEffect(() => {
+    const fetchUrls = async () => {
+      try {
+        // Send the GET request to the backend endpoint /api/listurls
+        const response = await axios.get(
+          "https://nodejsday6-urlshortener.onrender.com/api/listurls"
+        );
 
-         if (response.status === 200) {
-           // Update the state with the list of URLs
-           setShortUrls(response.data);
-         } else {
-           console.error("Error fetching the URLs");
-         }
-       } catch (error) {
-         console.error("Error:", error);
-       }
-     };
+        if (response.status === 200) {
+          // Update the state with the list of URLs
+          setShortUrls(response.data);
+        } else {
+          console.error("Error fetching the URLs");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
 
-     // Fetch URLs when the component mounts
-     fetchUrls();
-   }, []);
+    // Fetch URLs when the component mounts
+    fetchUrls();
+  }, []);
 
   return (
     <div>
@@ -85,8 +87,6 @@ const UrlShortener = () => {
                   {shortUrl.shortUrl}
                 </a>
               </td>
-            
-            
             </tr>
           ))}
         </tbody>
