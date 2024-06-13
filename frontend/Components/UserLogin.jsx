@@ -18,7 +18,7 @@ const UserLogin = () => {
 
     await axios
       .post(
-        "https://nodejsday5-passwordresettask.onrender.com/api/user/login",
+        "https://nodejsday6-urlshortener.onrender.com/api/user/login",
         payloads
       )
       .then((res) => {
@@ -34,8 +34,7 @@ const UserLogin = () => {
             draggable: true,
             progress: undefined,
           });
-            navigate('/url-shortener');
-        
+          navigate("/url-shortener");
         }
       })
       .catch((err) => {
