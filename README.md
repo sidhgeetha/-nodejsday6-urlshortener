@@ -35,13 +35,12 @@ Folder structure
 
 
 Front end URL:
-https://jolly-gecko-68dd0a.netlify.app/login
-https://jolly-gecko-68dd0a.netlify.app/register 
-https://main--jolly-gecko-68dd0a.netlify.app/reset-password
-https://main--jolly-gecko-68dd0a.netlify.app/setnew-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjY0NzBlZjc1ZDA5NzkwY2IzZDFjYzciLCJpYXQiOjE3MTc4NjkxNjksImV4cCI6MTcxNzg3Mjc2OX0.nEuy_X9lhPijxs6FTQJsKgZRUMquWv3d5JoZpTEgSns
+https://main--cerulean-raindrop-2dcc3f.netlify.app/register     
+ https://main--cerulean-raindrop-2dcc3f.netlify.app/login          
+ https://main--cerulean-raindrop-2dcc3f.netlify.app/url-shortener
 
 Backend URL:
-https://nodejsday5-passwordresettask.onrender.com
+https://nodejsday6-urlshortener.onrender.com
 
 
 User register:
@@ -50,4 +49,5 @@ User register:
 User login
 ![alt text](image-1.png)
 
+url shortener
 ![alt text](image-7.png)
